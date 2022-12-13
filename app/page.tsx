@@ -7,11 +7,11 @@ export default async function Home() {
   return (
     <div className="bg-blue-900">
       <main>
-        <h1>
+        <h1 className="font-nunito">
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
 
-        <p>
+        <p className="font-josefin">
           Get started by editing <code>app/page.tsx</code>
         </p>
 

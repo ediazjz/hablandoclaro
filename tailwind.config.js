@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["var(--font-nunito)"],
+        josefin: ["var(--font-josefin)"],
+      },
+    },
   },
   plugins: [],
-}
+};
