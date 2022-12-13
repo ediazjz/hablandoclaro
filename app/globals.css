@@ -6,4 +6,8 @@
   html {
     @apply bg-zinc-900 text-zinc-100;
   }
+
+  .logo {
+    @apply font-josefin text-3xl font-bold leading-none md:text-4xl xl:text-5xl 2xl:text-6xl;
+  }
 }
