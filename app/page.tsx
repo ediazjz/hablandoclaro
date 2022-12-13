@@ -5,7 +5,7 @@ export default async function Home() {
   const { data: posts } = await supabase.from("posts").select();
 
   return (
-    <div className="bg-blue-900">
+    <div className="bg-primary">
       <main>
         <h1 className="font-nunito">
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>

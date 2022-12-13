@@ -11,6 +11,13 @@ module.exports = {
         nunito: ["var(--font-nunito)"],
         josefin: ["var(--font-josefin)"],
       },
+      colors: {
+        primary: {
+          light: "#017caa",
+          DEFAULT: "#018abd",
+          dark: "#34a1ca",
+        },
+      },
     },
   },
   plugins: [],
