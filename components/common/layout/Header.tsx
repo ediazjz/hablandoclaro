@@ -14,10 +14,10 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex h-fit w-full items-center justify-between p-6 pb-4 lg:col-span-2 lg:row-[span_10_/_span_10] lg:h-full lg:flex-col lg:flex-wrap  lg:py-12">
+    <header className="flex h-fit w-full items-center justify-between p-6 pb-4 lg:col-span-2 lg:row-[span_10_/_span_10] lg:h-full lg:flex-col lg:py-12">
       <h1 className="logo w-1/3 lg:mb-16 lg:w-full">Hablando claro.</h1>
 
-      <div className="flex w-1/2 items-center lg:w-full lg:flex-1 lg:flex-col lg:flex-wrap lg:items-start lg:justify-between">
+      <div className="flex w-1/2 items-center lg:w-full lg:flex-1 lg:flex-col lg:items-start lg:justify-between">
         <ButtonLink
           href="/subscribe"
           text="Subscribe"
