@@ -56,9 +56,7 @@
   .logo {
     @apply font-josefin text-3xl font-bold leading-none md:text-4xl xl:text-5xl 2xl:text-6xl;
   }
-}
 
-@layer components {
   .btn {
     @apply flex cursor-pointer items-center justify-center space-x-2 rounded border-2 border-solid px-4 py-2 text-center font-semibold transition-all duration-300 ease-linear disabled:cursor-not-allowed disabled:opacity-50 md:px-6 xl:space-x-3 xl:px-8;
   }
@@ -78,4 +76,7 @@
   .btn-ghost {
     @apply border-transparent bg-transparent text-zinc-100 hover:border-zinc-100 hover:bg-zinc-100 hover:text-zinc-900 disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:text-zinc-100;
   }
+}
+
+@layer components {
 }
