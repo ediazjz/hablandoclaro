@@ -54,11 +54,11 @@
     @apply text-2xs md:text-xs xl:text-sm;
   }
   .logo {
-    @apply font-josefin text-3xl font-bold leading-none md:text-4xl xl:text-5xl 2xl:text-6xl;
+    @apply font-josefin text-xl font-bold leading-none md:text-4xl xl:text-5xl 2xl:text-6xl;
   }
 
   .btn {
-    @apply flex cursor-pointer items-center justify-center space-x-2 rounded border-2 border-solid px-4 py-2 text-center font-semibold transition-all duration-300 ease-linear disabled:cursor-not-allowed disabled:opacity-50 md:px-6 xl:space-x-3 xl:px-8;
+    @apply flex cursor-pointer items-center justify-center space-x-2 border-2 border-solid px-4 py-1 text-center font-semibold transition-all duration-300 ease-linear disabled:cursor-not-allowed disabled:opacity-50 sm:py-2 md:px-6 xl:space-x-3 xl:px-8;
   }
   .btn-primary {
     @apply border-primary bg-primary text-zinc-100 hover:border-primary-dark hover:bg-primary-dark disabled:hover:border-primary disabled:hover:bg-primary;

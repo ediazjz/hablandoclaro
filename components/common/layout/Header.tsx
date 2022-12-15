@@ -14,7 +14,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex h-fit w-full items-center justify-between p-6 pb-4 lg:col-span-2 lg:row-[span_10_/_span_10] lg:h-full lg:flex-col lg:py-12">
+    <header className="flex h-full w-full items-center justify-between px-4 pt-5 md:h-full lg:col-span-2 lg:row-[span_10_/_span_10] lg:flex-col lg:py-12">
       <h1 className="logo w-1/3 lg:mb-16 lg:w-full">Hablando claro.</h1>
 
       <div className="flex w-1/2 items-center lg:w-full lg:flex-1 lg:flex-col lg:items-start lg:justify-between">
@@ -32,14 +32,14 @@ export const Header = () => {
         />
 
         <ul
-          className={`h5 absolute top-[6.3rem] h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 lg:static lg:order-1 lg:mb-32 lg:w-full lg:space-y-8 lg:border-transparent lg:px-0 lg:text-left ${
+          className={`h6 absolute top-[5.6875rem] h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 lg:static lg:order-1 lg:mb-32 lg:w-full lg:space-y-8 lg:border-transparent lg:px-0 lg:text-left ${
             isOpen ? "right-0" : "-right-full"
           }`}
         >
           <li>
             <Link
               href="/"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/" ? "border-zinc-100" : "border-transparent"
               }`}
             >
@@ -51,7 +51,7 @@ export const Header = () => {
           <li>
             <Link
               href="/programming"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/programming"
                   ? "border-zinc-100"
                   : "border-transparent"
@@ -63,7 +63,7 @@ export const Header = () => {
           <li>
             <Link
               href="/design"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/design"
                   ? "border-zinc-100"
                   : "border-transparent"
@@ -75,7 +75,7 @@ export const Header = () => {
           <li>
             <Link
               href="/philosophy"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/philosophy"
                   ? "border-zinc-100"
                   : "border-transparent"
@@ -87,7 +87,7 @@ export const Header = () => {
           <li>
             <Link
               href="/life"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/life" ? "border-zinc-100" : "border-transparent"
               }`}
             >
@@ -97,7 +97,7 @@ export const Header = () => {
           <li>
             <Link
               href="/books"
-              className={`border-b-2 ${
+              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
                 pathname === "/books" ? "border-zinc-100" : "border-transparent"
               }`}
             >
