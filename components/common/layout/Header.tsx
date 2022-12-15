@@ -8,8 +8,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/sharp-solid-svg-icons";
 
 import { ButtonLink } from "../button";
+import { Category } from "./types";
 
-export const Header = () => {
+interface Props {
+  categories: Category[] | null;
+}
+
+export const Header = ({ categories }: Props) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,63 +52,20 @@ export const Header = () => {
             </Link>
           </li>
 
-          {/* Refactor from here on to fetch categories from database */}
-          <li>
-            <Link
-              href="/programming"
-              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
-                pathname === "/programming"
-                  ? "border-zinc-100"
-                  : "border-transparent"
-              }`}
-            >
-              Programming
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/design"
-              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
-                pathname === "/design"
-                  ? "border-zinc-100"
-                  : "border-transparent"
-              }`}
-            >
-              Design
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/philosophy"
-              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
-                pathname === "/philosophy"
-                  ? "border-zinc-100"
-                  : "border-transparent"
-              }`}
-            >
-              Philosophy
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/life"
-              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
-                pathname === "/life" ? "border-zinc-100" : "border-transparent"
-              }`}
-            >
-              Life
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/books"
-              className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
-                pathname === "/books" ? "border-zinc-100" : "border-transparent"
-              }`}
-            >
-              Books
-            </Link>
-          </li>
+          {categories?.map((category) => (
+            <li key={category.slug}>
+              <Link
+                href={category.slug}
+                className={`border-b-2 transition-all duration-300 ease-linear hover:bg-zinc-500  ${
+                  pathname?.includes(category.slug)
+                    ? "border-zinc-100"
+                    : "border-transparent"
+                }`}
+              >
+                {category.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </header>
