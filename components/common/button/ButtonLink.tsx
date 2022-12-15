@@ -1,5 +1,6 @@
+import { ReactNode } from "react";
+
 import Link from "next/link";
-import { ReactNode, useState } from "react";
 
 import { twMerge } from "tailwind-merge";
 
