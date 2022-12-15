@@ -33,7 +33,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        nunito: ["var(--font-nunito)"],
+        ubuntu: ["var(--font-ubuntu)"],
         josefin: ["var(--font-josefin)"],
       },
       colors: {

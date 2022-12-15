@@ -14,7 +14,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative flex h-full w-full items-center justify-between px-4 pt-5 md:h-full md:px-6 lg:col-span-2 lg:row-[span_10_/_span_10] lg:flex-col lg:py-12">
+    <header className="relative flex h-full w-full items-center justify-between border-zinc-700 px-4 pt-5 md:h-full md:px-6 lg:col-span-2 lg:row-[span_10_/_span_10] lg:flex-col lg:border-r-2 lg:py-12">
       <h1 className="logo w-1/3 lg:mb-16 lg:w-full">Hablando claro.</h1>
 
       <div className="flex w-1/2 items-center lg:w-full lg:flex-1 lg:flex-col lg:items-start lg:justify-between">
