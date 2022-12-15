@@ -3,4 +3,5 @@ export type Category = {
   slug: string;
   created_at?: string;
   description?: string;
+  color?: string;
 };

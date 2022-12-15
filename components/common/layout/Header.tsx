@@ -37,7 +37,7 @@ export const Header = ({ categories }: Props) => {
         />
 
         <ul
-          className={`h6 absolute top-[calc(100%_+_1rem)] h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 lg:static lg:order-1 lg:mb-32 lg:w-full lg:space-y-8 lg:border-transparent lg:px-0 lg:text-left ${
+          className={`h6 absolute top-[calc(100%_+_1rem)] z-50 h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 lg:static lg:order-1 lg:mb-32 lg:w-full lg:space-y-8 lg:border-transparent lg:px-0 lg:text-left ${
             isOpen ? "right-0" : "-right-full"
           }`}
         >
