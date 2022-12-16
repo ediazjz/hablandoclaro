@@ -1,5 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShareNodes } from "@fortawesome/sharp-solid-svg-icons";
 import Image from "next/image";
-import Link from "next/link";
+
+import { truncateText } from "../../lib";
+import { Button, ButtonLink } from "../common";
 
 interface Props {
   title: string;
@@ -17,23 +21,41 @@ export const Card = ({
   categories,
 }: Props) => {
   return (
-    <article className="h-96 w-full border-2 border-zinc-100">
-      <Link href={slug}>
-        <h1 className="h3">{title}</h1>
+    <article className="mb-6 w-full break-inside-avoid-column bg-zinc-800 xl:mb-8">
+      <div className="relative z-10 block aspect-video w-full">
+        <Image src={thumbnailImage} alt="foto" fill />
+      </div>
 
-        <p>{description}</p>
-
+      <div className="p-4">
         <span
-          className={"border"}
-          style={{ borderColor: categories.color, color: categories.color }}
+          className="smoll mb-4 block w-fit border px-3 py-1"
+          style={{
+            borderColor: categories.color,
+            color: categories.color,
+          }}
         >
           {categories.name}
         </span>
 
-        <div className="relative z-10 block h-48 w-full">
-          <Image src={thumbnailImage} alt="foto" fill />
+        <h1 className="h4 mb-2 leading-none text-zinc-50">{title}</h1>
+
+        <p className="mb-6">{truncateText(description)}</p>
+
+        <div className="flex w-full items-center justify-between">
+          <ButtonLink
+            href={`${categories.slug}/${slug}`}
+            variant="primary-outlined"
+            text="Read more"
+          />
+
+          <Button
+            type="button"
+            variant="ghost"
+            icon={<FontAwesomeIcon icon={faShareNodes} className="h-6 w-6" />}
+            className="px-1 sm:px-2 md:px-2 xl:px-2"
+          />
         </div>
-      </Link>
+      </div>
     </article>
   );
 };

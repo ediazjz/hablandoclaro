@@ -51,10 +51,10 @@
   }
 
   .smoll {
-    @apply text-2xs md:text-xs xl:text-sm;
+    @apply text-xs xl:text-sm;
   }
   .logo {
-    @apply font-josefin text-xl font-bold leading-none md:text-4xl xl:text-5xl 2xl:text-6xl;
+    @apply font-josefin text-xl font-bold leading-none line-through sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl 2xl:text-6xl;
   }
 
   .btn {
@@ -64,7 +64,7 @@
     @apply border-primary bg-primary text-zinc-100 hover:border-primary-dark hover:bg-primary-dark disabled:hover:border-primary disabled:hover:bg-primary;
   }
   .btn-primary-outlined {
-    @apply border-primary bg-transparent text-primary hover:border-primary-dark hover:text-primary-dark disabled:hover:border-primary disabled:hover:text-primary;
+    @apply border-primary bg-transparent text-primary hover:border-primary-dark hover:bg-primary-dark hover:text-zinc-100 disabled:hover:border-primary disabled:hover:text-primary;
   }
   .btn-white {
     @apply border-zinc-100 bg-zinc-100 text-primary hover:border-zinc-300 hover:bg-zinc-300 hover:text-primary-dark disabled:hover:border-zinc-100 disabled:hover:bg-zinc-100;
