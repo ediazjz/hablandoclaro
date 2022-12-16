@@ -78,5 +78,8 @@
   }
 }
 
-@layer components {
+@layer utilities {
+  .hide-on-xl {
+    @apply xl:hidden !important;
+  }
 }

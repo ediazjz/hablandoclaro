@@ -32,7 +32,7 @@ export const Header = ({ categories }: Props) => {
 
         <FontAwesomeIcon
           icon={isOpen ? faClose : faBars}
-          className="h-7 w-7 cursor-pointer text-zinc-100 md:h-8 md:w-8 xl:hidden"
+          className="hide-on-xl h-7 w-7 cursor-pointer text-zinc-100 md:h-8 md:w-8"
           onClick={() => setIsOpen(!isOpen)}
         />
 
