@@ -19,25 +19,25 @@ export const Header = ({ categories }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative flex h-full w-full items-center justify-between border-zinc-700 px-4 pt-5 md:h-full md:px-6 lg:col-span-2 lg:row-[span_10_/_span_10] lg:flex-col lg:border-r-2 lg:py-12">
-      <h1 className="logo w-1/3 lg:mb-16 lg:w-full">Hablando claro.</h1>
+    <header className="relative flex h-full w-full items-center justify-between border-zinc-700 px-4 pt-5 md:h-full md:px-6 xl:col-span-2 xl:row-[span_10_/_span_10] xl:flex-col xl:border-r-2 xl:py-12">
+      <h1 className="logo w-1/3 xl:mb-16 xl:w-full">Hablando claro.</h1>
 
-      <div className="flex w-1/2 items-center lg:w-full lg:flex-1 lg:flex-col lg:items-start lg:justify-between">
+      <div className="flex w-1/2 items-center xl:w-full xl:flex-1 xl:flex-col xl:items-start xl:justify-between">
         <ButtonLink
           href="/subscribe"
           text="Subscribe"
           variant="primary"
-          className="ml-auto mr-8 w-fit lg:order-2 lg:mx-0 lg:w-full"
+          className="ml-auto mr-8 w-fit xl:order-2 xl:mx-0 xl:w-full"
         />
 
         <FontAwesomeIcon
           icon={isOpen ? faClose : faBars}
-          className="h-7 w-7 cursor-pointer text-zinc-100 md:h-8 md:w-8 lg:hidden"
+          className="h-7 w-7 cursor-pointer text-zinc-100 md:h-8 md:w-8 xl:hidden"
           onClick={() => setIsOpen(!isOpen)}
         />
 
         <ul
-          className={`h6 absolute top-[calc(100%_+_1rem)] z-50 h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 lg:static lg:order-1 lg:mb-32 lg:w-full lg:space-y-8 lg:border-transparent lg:px-0 lg:text-left ${
+          className={`h6 absolute top-[calc(100%_+_1rem)] z-50 h-fit w-[60%] space-y-6 border-l-2 border-b-2 border-zinc-700 bg-zinc-900 p-6 text-right transition-all duration-300 ease-in-out sm:w-1/2 md:w-1/3 xl:static xl:order-1 xl:mb-32 xl:w-full xl:space-y-8 xl:border-transparent xl:px-0 xl:text-left ${
             isOpen ? "right-0" : "-right-full"
           }`}
         >
