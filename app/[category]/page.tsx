@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Template } from "../../components/common";
+import { TemplateListing } from "../../components/common";
 import { Card } from "../../components/post";
 import { supabase } from "../../lib";
 
@@ -47,7 +47,7 @@ export default async function Home({
   const { categories, posts } = await getData(params.category);
 
   return (
-    <Template categories={categories}>
+    <TemplateListing categories={categories}>
       {posts?.map((post) => (
         <Card
           key={post.id}
@@ -58,6 +58,6 @@ export default async function Home({
           categories={post.categories}
         />
       ))}
-    </Template>
+    </TemplateListing>
   );
 }

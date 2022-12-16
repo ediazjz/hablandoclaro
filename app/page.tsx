@@ -1,4 +1,4 @@
-import { Template } from "../components/common";
+import { TemplateListing } from "../components/common";
 import { Card } from "../components/post";
 import { supabase } from "../lib";
 
@@ -15,7 +15,7 @@ export default async function Home() {
     .order("created_at", { ascending: false });
 
   return (
-    <Template categories={categories}>
+    <TemplateListing categories={categories}>
       {posts?.map((post) => (
         <Card
           key={post.id}
@@ -26,6 +26,6 @@ export default async function Home() {
           categories={post.categories}
         />
       ))}
-    </Template>
+    </TemplateListing>
   );
 }
