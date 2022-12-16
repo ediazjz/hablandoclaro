@@ -10,7 +10,7 @@ export default async function Home() {
   const { data: posts } = await supabase
     .from("posts")
     .select(
-      "id, title, slug, description, thumbnailImage, categories (name, color)"
+      "id, title, slug, description, thumbnailImage, categories (name, slug, color)"
     )
     .order("created_at", { ascending: false });
 
